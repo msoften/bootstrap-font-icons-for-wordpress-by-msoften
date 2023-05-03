@@ -18,6 +18,7 @@ function bootstrap_font_icons()
 {
 	wp_enqueue_style('bootstrap-font-icons-by-msoften', plugins_url('bootstrap-icons.css', __FILE__));
 }
+add_action('wp_enqueue_scripts', 'bootstrap_font_icons');
 
 /**
  * Returns a Bootstrap Font Icon HTML element as a shortcode.
@@ -30,16 +31,16 @@ function bootstrap_font_icons()
  * @param array $atts An array of shortcode attributes.
  * @return string An HTML element containing a Bootstrap Font Icon.
  */
-add_action('wp_enqueue_scripts', 'bootstrap_font_icons');
-
 function bi_bootstrap_font_icons_shortcode($atts)
 {
 	$atts = shortcode_atts(
 		array(
 			'icon' => '',
-		), $atts);
+		),
+		$atts
+	);
 
-	$output = '<i class="bi bi-'. $atts['icon'] .'"></i>';
+	$output = '<i class="bi bi-' . $atts['icon'] . '"></i>';
 
 	return $output;
 }
