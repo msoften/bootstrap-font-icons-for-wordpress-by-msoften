@@ -1,2 +1,5 @@
-# bootstrap-font-icons-for-wordpress-by-msoften
- Bootstrap icons for WordPress Plugin
+# Bootstrap font icons for WordPress.
+Bootstrap font icons for WordPress Plugin.
+
+# How add to Wordpress.
+# How to use icons.
